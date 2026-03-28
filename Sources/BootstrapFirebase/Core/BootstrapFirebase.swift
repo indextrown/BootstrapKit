@@ -6,9 +6,30 @@
 //
 
 import FirebaseCore
+import KakaoSDKCommon
+
+public struct BootstrapConfig {
+    public let firebase: Bool
+    public let kakaoAppKey: String?
+    
+    public init(
+        firebase: Bool,
+        kakaoAppKey: String?
+    ) {
+        self.firebase = firebase
+        self.kakaoAppKey = kakaoAppKey
+    }
+}
 
 public enum BootstrapFirebase {
-    public static func configure() {
-        FirebaseApp.configure()
+    public static func configure(_ config: BootstrapConfig) {
+        
+        if config.firebase {
+            FirebaseApp.configure()
+        }
+        
+        if let kakaoAppKey = config.kakaoAppKey {
+            KakaoSDK.initSDK(appKey: kakaoAppKey)
+        }
     }
 }

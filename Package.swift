@@ -19,6 +19,14 @@ let package = Package(
         .package(
             url: "https://github.com/firebase/firebase-ios-sdk.git",
             from: "12.11.0"
+        ),
+        .package(
+            url: "https://github.com/kakao/kakao-ios-sdk.git",
+            from: "2.27.2"
+        ),
+        .package(
+            url: "https://github.com/google/GoogleSignIn-iOS",
+            from: "9.1.0"
         )
     ],
     targets: [
@@ -32,7 +40,12 @@ let package = Package(
             name: "BootstrapFirebase",
             dependencies: [
                 .product(name: "FirebaseAuth", package: "firebase-ios-sdk"),
-                .product(name: "FirebaseCore", package: "firebase-ios-sdk")
+                .product(name: "FirebaseCore", package: "firebase-ios-sdk"),
+                
+                .product(name: "KakaoSDKAuth", package: "kakao-ios-sdk"),
+                .product(name: "KakaoSDKUser", package: "kakao-ios-sdk"),
+                
+                .product(name: "GoogleSignIn", package: "GoogleSignIn-iOS")
             ]
         ),
         

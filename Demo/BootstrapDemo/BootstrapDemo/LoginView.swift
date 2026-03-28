@@ -18,12 +18,39 @@ struct LoginView: View {
                         print("로그인 성공")
                         print("uid: \(result.uid)")
                     } catch {
-                        // error handling
                         print("로그인 실패: \(error)")
                     }
                 }
             } label: {
                 Text("애플 로그인")
+            }
+            
+            Button {
+                Task {
+                    do {
+                        let result = try await loginVM.loginWithKakao()
+                        print("로그인 성공")
+                        print("uid: \(result.uid)")
+                    } catch {
+                        print("로그인 실패: \(error)")
+                    }
+                }
+            } label: {
+                Text("카카오 로그인")
+            }
+            
+            Button {
+                Task {
+                    do {
+                        let result = try await loginVM.loginWithGoogle()
+                        print("로그인 성공")
+                        print("uid: \(result.uid)")
+                    } catch {
+                        print("로그인 실패: \(error)")
+                    }
+                }
+            } label: {
+                Text("구글 로그인")
             }
         }
     }
@@ -36,5 +63,13 @@ struct LoginView: View {
 final class LoginViewModel: ObservableObject {
     func loginWithApple() async throws -> AuthResult {
         try await BootstrapFirebaseAuth.loginWithApple()
+    }
+    
+    func loginWithKakao() async throws -> AuthResult {
+        try await BootstrapFirebaseAuth.loginWithKakao()
+    }
+    
+    func loginWithGoogle() async throws -> AuthResult {
+        try await BootstrapFirebaseAuth.loginWithGoogle()
     }
 }
