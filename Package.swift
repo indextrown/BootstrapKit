@@ -7,16 +7,36 @@ let package = Package(
     name: "BootstrapKit",
     platforms: [.iOS(.v16)],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "BootstrapKit",
             targets: ["BootstrapKit"]),
+        .library(
+            name: "BootstrapFirebase",
+            targets: ["BootstrapFirebase"]
+        )
+    ],
+    dependencies: [
+        .package(
+            url: "https://github.com/firebase/firebase-ios-sdk.git",
+            from: "12.11.0"
+        )
     ],
     targets: [
-        // Targets are the basic building blocks of a package, defining a module or a test suite.
-        // Targets can depend on other targets in this package and products from dependencies.
+        // BootstrapKit
         .target(
-            name: "BootstrapKit"),
+            name: "BootstrapKit"
+        ),
+        
+        // BootstrapFirebase
+        .target(
+            name: "BootstrapFirebase",
+            dependencies: [
+                .product(name: "FirebaseAuth", package: "firebase-ios-sdk"),
+                .product(name: "FirebaseCore", package: "firebase-ios-sdk")
+            ]
+        ),
+        
+        // test
         .testTarget(
             name: "BootstrapKitTests",
             dependencies: ["BootstrapKit"]

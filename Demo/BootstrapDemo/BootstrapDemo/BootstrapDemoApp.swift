@@ -6,12 +6,18 @@
 //
 
 import SwiftUI
+import BootstrapFirebase
 
 @main
 struct BootstrapDemoApp: App {
+    
+    init() {
+        // BootstrapFirebase.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            LoginView()
         }
     }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DFBEC69B2F77953F006D5C9E /* BootstrapFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = DFBEC69A2F77953F006D5C9E /* BootstrapFirebase */; };
 		DFFF09DC2F7148DD00064D84 /* BootstrapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DFFF09DB2F7148DD00064D84 /* BootstrapKit */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFBEC69B2F77953F006D5C9E /* BootstrapFirebase in Frameworks */,
 				DFFF09DC2F7148DD00064D84 /* BootstrapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,12 +79,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DFBEC6992F77953F006D5C9E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		DFFF09A72F7148BA00064D84 = {
 			isa = PBXGroup;
 			children = (
 				DFFF09B22F7148BA00064D84 /* BootstrapDemo */,
 				DFFF09C02F7148BB00064D84 /* BootstrapDemoTests */,
 				DFFF09CA2F7148BB00064D84 /* BootstrapDemoUITests */,
+				DFBEC6992F77953F006D5C9E /* Frameworks */,
 				DFFF09B12F7148BA00064D84 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,6 +128,7 @@
 			name = BootstrapDemo;
 			packageProductDependencies = (
 				DFFF09DB2F7148DD00064D84 /* BootstrapKit */,
+				DFBEC69A2F77953F006D5C9E /* BootstrapFirebase */,
 			);
 			productName = BootstrapDemo;
 			productReference = DFFF09B02F7148BA00064D84 /* BootstrapDemo.app */;
@@ -404,6 +415,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BootstrapDemo/BootstrapDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LGX4B4WC66;
@@ -432,6 +444,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BootstrapDemo/BootstrapDemo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LGX4B4WC66;
@@ -576,6 +589,11 @@
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DFBEC69A2F77953F006D5C9E /* BootstrapFirebase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DFFF09DA2F7148DD00064D84 /* XCLocalSwiftPackageReference "../../../BootstrapKit" */;
+			productName = BootstrapFirebase;
+		};
 		DFFF09DB2F7148DD00064D84 /* BootstrapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = BootstrapKit;
