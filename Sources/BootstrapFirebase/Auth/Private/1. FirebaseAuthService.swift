@@ -7,8 +7,8 @@
 
 import FirebaseAuth
 
-struct FirebaseAuthService {
-    func signIn(
+enum FirebaseAuthService {
+    static func signIn(
         credential: AuthCredential,
         completion: @escaping (Result<User, Error>) -> Void
     ) {

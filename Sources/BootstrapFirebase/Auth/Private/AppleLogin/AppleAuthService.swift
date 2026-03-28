@@ -69,7 +69,7 @@ extension AppleLoginExecutor: ASAuthorizationControllerDelegate {
             rawNonce: nonce
         )
         
-        FirebaseAuthService().signIn(credential: firebaseCredential) { result in
+        FirebaseAuthService.signIn(credential: firebaseCredential) { result in
             switch result {
             case .success(let user):
                 self.completion?(
