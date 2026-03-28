@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF4BECA22F7802FA00DBBFF9 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = DF4BECA12F7802FA00DBBFF9 /* .gitignore */; };
 		DFBEC69B2F77953F006D5C9E /* BootstrapFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = DFBEC69A2F77953F006D5C9E /* BootstrapFirebase */; };
 		DFFF09DC2F7148DD00064D84 /* BootstrapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DFFF09DB2F7148DD00064D84 /* BootstrapKit */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF4BECA12F7802FA00DBBFF9 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		DFFF09B02F7148BA00064D84 /* BootstrapDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BootstrapDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFFF09BD2F7148BB00064D84 /* BootstrapDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BootstrapDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFFF09C72F7148BB00064D84 /* BootstrapDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BootstrapDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +91,7 @@
 		DFFF09A72F7148BA00064D84 = {
 			isa = PBXGroup;
 			children = (
+				DF4BECA12F7802FA00DBBFF9 /* .gitignore */,
 				DFFF09B22F7148BA00064D84 /* BootstrapDemo */,
 				DFFF09C02F7148BB00064D84 /* BootstrapDemoTests */,
 				DFFF09CA2F7148BB00064D84 /* BootstrapDemoUITests */,
@@ -232,6 +235,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF4BECA22F7802FA00DBBFF9 /* .gitignore in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

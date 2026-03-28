@@ -13,9 +13,9 @@ public enum BootstrapFirebaseAuth {
 }
 
 // MARK: - Apple
-extension BootstrapFirebaseAuth {
+public extension BootstrapFirebaseAuth {
     // completion
-    public static func loginWithApple(
+    static func loginWithApple(
         completion: @escaping (Result<AuthResult, Error>) -> Void
     ) {
         let excutor = AppleLoginExecutor()
@@ -27,7 +27,7 @@ extension BootstrapFirebaseAuth {
     }
     
     // async
-    public static func loginWithApple() async throws -> AuthResult {
+    static func loginWithApple() async throws -> AuthResult {
         try await withCheckedThrowingContinuation { continuation in
             loginWithApple { result in
                 switch result {
@@ -40,5 +40,3 @@ extension BootstrapFirebaseAuth {
         }
     }
 }
-
-

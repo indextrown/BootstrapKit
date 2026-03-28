@@ -8,12 +8,20 @@
 import SwiftUI
 import BootstrapFirebase
 
+class AppDelegate: NSObject, UIApplicationDelegate {
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil
+    ) -> Bool {
+        // FirebaseApp.configure()
+        BootstrapFirebase.configure()
+        return true
+    }
+}
+
 @main
 struct BootstrapDemoApp: App {
     
-    init() {
-        // BootstrapFirebase.configure()
-    }
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     
     var body: some Scene {
         WindowGroup {
