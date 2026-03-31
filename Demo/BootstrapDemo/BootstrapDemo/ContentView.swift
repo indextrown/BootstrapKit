@@ -46,16 +46,16 @@ struct ContentView: View {
     }
 
     var body: some View {
-        BSCollectionList(rows, spacing: 10) { row in
-            CustomCell(row: row)
-        }
-        .onSelect { info in
-            print("\(info)")
-        }
-        .scrollIndicators(false)
-        .contentInsets(UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16))
-        .backgroundColor(.systemBackground)
-        .navigationTitle("BSCollectionList")
+            BSCollectionList(rows, spacing: 10) { row in
+                CustomCell(row: row)
+            }
+            .onSelect { info in
+                print("\(info)")
+            }
+            .scrollIndicators(false)
+            .contentInsets(UIEdgeInsets(top: 16, left: 16, bottom: 16, right: 16))
+            .backgroundColor(.systemBackground)
+            .navigationTitle("BSCollectionList")
     }
 }
 
