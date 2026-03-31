@@ -28,7 +28,8 @@ struct BootstrapDemoApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LoginView()
+            // LoginView()
+            ContentView()
         }
     }
 }

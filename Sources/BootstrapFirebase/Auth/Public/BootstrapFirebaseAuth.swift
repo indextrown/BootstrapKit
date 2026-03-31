@@ -79,7 +79,6 @@ public extension BootstrapFirebaseAuth {
     // completion
     @MainActor
     static func loginWithGoogle(
-
         completion: @escaping (Result<AuthResult, Error>) -> Void
     ) {
         let executor = GoogleLoginExecutor()
